@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xanadu Enterprises — deep knowledge, working systems</title>
+<meta name="description" content="Xanadu Enterprises builds AI systems that understand how work and knowledge move through an organization — then carry them. Agentic workflows, knowledge structures, and a research practice underneath.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0e1a'/%3E%3Cg fill='none' stroke='%23c6a04e' stroke-width='1.2'%3E%3Ccircle cx='16' cy='16' r='10'/%3E%3Ccircle cx='16' cy='16' r='5'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='4.5' transform='rotate(35 16 16)'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23e9d9a9'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0e1a;        /* midnight indigo background */
+    --void:#06080f;       /* deeper panels */
+    --brass:#c6a04e;      /* primary accent / line work */
+    --brass-dim:#8a7338;  /* faint lines */
+    --gilt:#e9d9a9;       /* bright gold highlight */
+    --parchment:#e7e2d4;  /* body + headings */
+    --slate:#888ea0;      /* muted secondary */
+    --line:rgba(198,160,78,.18);
+    --max:1180px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--parchment);
+    font-family:"Space Grotesk",system-ui,sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* ambient dome-light glow + faint vignette */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(198,160,78,.10), transparent 55%),
+      radial-gradient(140% 120% at 50% 120%, rgba(11,14,26,.9), transparent 60%);
+  }
+
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(198,160,78,.28);color:#fff}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+  .mono{font-family:"Space Mono",monospace}
+  .eyebrow{
+    font-family:"Space Mono",monospace;
+    font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--brass);
+  }
+
+  /* ---------- header ---------- */
+  header{position:absolute;top:0;left:0;right:0;z-index:5}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:26px 28px;max-width:var(--max);margin:0 auto}
+  .mark{display:flex;align-items:center;gap:12px;font-family:"Cormorant Garamond",serif;font-size:1.25rem;letter-spacing:.16em;text-transform:uppercase;color:var(--parchment)}
+  .mark .sigil{width:22px;height:22px;flex:0 0 auto;opacity:.9}
+  .navlink{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--slate);transition:color .3s}
+  .navlink:hover{color:var(--gilt)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 0 80px}
+  .astro{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);
+    width:min(86vw,720px);aspect-ratio:1;z-index:0;pointer-events:none;
+    opacity:.85;
+  }
+  .astro .ring{fill:none;stroke:var(--brass);opacity:.22}
+  .astro .ring-faint{fill:none;stroke:var(--brass-dim);opacity:.16}
+  .astro .spokes{stroke:var(--brass);opacity:.12;transform-origin:300px 300px;animation:spin 240s linear infinite}
+  .astro .ticks{stroke:var(--brass);opacity:.3;transform-origin:300px 300px;animation:spin 480s linear infinite reverse}
+  .astro .orbit{fill:none;stroke:var(--gilt);opacity:.55;stroke-width:1.1;transform-origin:300px 300px;animation:spin 160s linear infinite}
+  .astro .core{fill:var(--gilt);opacity:.9}
+  .astro .star{fill:var(--gilt)}
+  .astro .tw1{animation:tw 5.5s ease-in-out infinite}
+  .astro .tw2{animation:tw 7s ease-in-out infinite .8s}
+  .astro .tw3{animation:tw 6.2s ease-in-out infinite 1.6s}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+
+  .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px}
+  .hero .eyebrow{display:block;margin-bottom:30px}
+  .wordmark{
+    font-family:"Cormorant Garamond",serif;font-weight:300;
+    font-size:clamp(3.6rem,13vw,8.4rem);line-height:.92;letter-spacing:.04em;
+    margin:0;color:#fff;
+    text-shadow:0 0 60px rgba(198,160,78,.25);
+  }
+  .wordmark .glint{color:var(--gilt);font-style:italic;font-weight:400}
+  .lede{
+    font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;
+    font-size:clamp(1.25rem,3.4vw,1.85rem);color:var(--gilt);
+    margin:26px auto 0;max-width:34ch;line-height:1.4;
+  }
+  .sub{margin:22px auto 0;max-width:46ch;color:var(--slate);font-size:1rem}
+  .cue{margin-top:54px;display:inline-flex;flex-direction:column;align-items:center;gap:10px;color:var(--slate)}
+  .cue .eyebrow{color:var(--slate)}
+  .cue .stem{width:1px;height:46px;background:linear-gradient(var(--brass),transparent);animation:drift 2.6s ease-in-out infinite}
+  @keyframes drift{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(8px);opacity:1}}
+
+  /* ---------- section frame ---------- */
+  section.band{position:relative;padding:120px 0;border-top:1px solid var(--line)}
+  .lead{display:flex;align-items:baseline;gap:18px;margin-bottom:62px;flex-wrap:wrap}
+  .lead h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(1.9rem,4.5vw,3rem);margin:0;letter-spacing:.01em;color:var(--parchment)}
+
+  /* ---------- practice (the sequence) ---------- */
+  .seq{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .step{background:var(--ink);padding:40px 34px 46px;position:relative;transition:background .4s}
+  .step:hover{background:var(--void)}
+  .step .num{font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--brass);line-height:1;opacity:.8}
+  .step h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.5rem;letter-spacing:.02em;margin:20px 0 14px;color:#fff}
+  .step p{margin:0;color:var(--slate);font-size:.96rem}
+  .step .tag{margin-top:26px;display:block;font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-dim)}
+
+  /* ---------- domains row ---------- */
+  .domains{display:flex;flex-wrap:wrap;gap:12px 14px;margin-top:8px}
+  .chip{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.08em;color:var(--slate);border:1px solid var(--line);border-radius:2px;padding:8px 14px;transition:.35s}
+  .chip:hover{color:var(--gilt);border-color:rgba(198,160,78,.4)}
+
+  /* ---------- research statement ---------- */
+  .research{padding:130px 0;border-top:1px solid var(--line);text-align:center}
+  .research .eyebrow{display:block;margin-bottom:34px}
+  .research p{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(1.6rem,4.2vw,2.6rem);line-height:1.35;max-width:20ch;margin:0 auto;color:var(--parchment)}
+  .research p em{font-style:italic;color:var(--gilt)}
+
+  /* ---------- contact ---------- */
+  .contact{padding:130px 0 40px;border-top:1px solid var(--line);text-align:center}
+  .contact h2{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(2.2rem,6vw,4rem);margin:0 0 18px;color:#fff}
+  .contact .sub{margin-bottom:40px}
+  .mailto{
+    display:inline-block;font-family:"Space Mono",monospace;font-size:.92rem;letter-spacing:.06em;
+    color:var(--gilt);padding:14px 30px;border:1px solid rgba(198,160,78,.4);border-radius:2px;
+    position:relative;overflow:hidden;transition:color .4s;
+  }
+  .mailto span{position:relative;z-index:1}
+  .mailto::after{content:"";position:absolute;inset:0;background:var(--brass);transform:translateY(101%);transition:transform .45s cubic-bezier(.2,.7,.2,1);z-index:0}
+  .mailto:hover{color:var(--ink)}
+  .mailto:hover::after{transform:translateY(0)}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;margin-top:80px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;color:var(--slate);font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase}
+  .foot .note{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.92rem;letter-spacing:.02em;text-transform:none;color:var(--brass-dim)}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:760px){
+    .seq{grid-template-columns:1fr}
+    .astro{opacity:.5;width:min(120vw,560px)}
+    section.band{padding:90px 0}
+    .research,.contact{padding:96px 0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="mark" href="#top" aria-label="Xanadu Enterprises home">
+      <svg class="sigil" viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="#c6a04e" stroke-width="1.1">
+          <circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="6"/>
+          <ellipse cx="16" cy="16" rx="12" ry="5" transform="rotate(34 16 16)"/>
+        </g>
+        <circle cx="16" cy="16" r="1.7" fill="#e9d9a9"/>
+      </svg>
+      Xanadu
+    </a>
+    <a class="navlink" href="#contact">Begin a conversation</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="astro" viewBox="0 0 600 600" aria-hidden="true">
+      <!-- concentric knowledge orbits -->
+      <circle class="ring" cx="300" cy="300" r="288" stroke-width="1"/>
+      <circle class="ring-faint" cx="300" cy="300" r="232" stroke-width="1"/>
+      <circle class="ring" cx="300" cy="300" r="176" stroke-width="1"/>
+      <circle class="ring-faint" cx="300" cy="300" r="118" stroke-width="1"/>
+
+      <!-- radiating spokes -->
+      <g class="spokes" stroke-width="1">
+        <line x1="300" y1="20" x2="300" y2="580"/>
+        <line x1="20" y1="300" x2="580" y2="300"/>
+        <line x1="103" y1="103" x2="497" y2="497"/>
+        <line x1="497" y1="103" x2="103" y2="497"/>
+      </g>
+
+      <!-- outer tick ring -->
+      <g class="ticks" stroke-width="1">
+        <g id="ticks"></g>
+      </g>
+
+      <!-- the eccentric orbit — the sacred river through Xanadu -->
+      <ellipse class="orbit" cx="300" cy="300" rx="280" ry="108" transform="rotate(28 300 300)"/>
+
+      <!-- stars at intersections -->
+      <circle class="star tw1" cx="300" cy="12" r="2.4"/>
+      <circle class="star tw2" cx="476" cy="176" r="2"/>
+      <circle class="star tw3" cx="176" cy="424" r="2"/>
+      <circle class="star tw2" cx="118" cy="182" r="1.8"/>
+      <circle class="star tw1" cx="482" cy="382" r="1.8"/>
+
+      <!-- core -->
+      <circle class="ring" cx="300" cy="300" r="40" stroke-width="1"/>
+      <circle class="core" cx="300" cy="300" r="3.4"/>
+    </svg>
+
+    <div class="hero-inner">
+      <span class="eyebrow">Lat 38&deg;N &nbsp;·&nbsp; The Mountain Works &nbsp;·&nbsp; Est. MMXXVI</span>
+      <h1 class="wordmark">Xan<span class="glint">a</span>du</h1>
+      <p class="lede">A stately structure for deep knowledge.</p>
+      <p class="sub">We study how work and intelligence move through an organization — then build the agentic systems that carry them.</p>
+      <a class="cue" href="#practice">
+        <span class="eyebrow">Descend</span>
+        <span class="stem"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRACTICE / THE SEQUENCE -->
+  <section class="band" id="practice">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">001 — The Method</span>
+        <h2>Three movements, in order.</h2>
+      </div>
+      <div class="seq reveal">
+        <div class="step">
+          <div class="num">I</div>
+          <h3>Survey</h3>
+          <p>We map the workflows and knowledge already in motion — and find where people and machines actually meet inside them.</p>
+          <span class="tag">workflows · knowledge bases</span>
+        </div>
+        <div class="step">
+          <div class="num">II</div>
+          <h3>Construct</h3>
+          <p>We design agentic systems with a research practice underneath. Built, measured, taken apart, rebuilt until they hold.</p>
+          <span class="tag">agents · structure · R&amp;D</span>
+        </div>
+        <div class="step">
+          <div class="num">III</div>
+          <h3>Deploy</h3>
+          <p>We set the working system where the problem lives, and stay long enough to know it carries its own weight.</p>
+          <span class="tag">in production · in the world</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAINS -->
+  <section class="band">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">002 — Where We Work</span>
+        <h2>Domain-agnostic, by design.</h2>
+      </div>
+      <p class="sub reveal" style="margin:0 0 30px;max-width:54ch">The problem decides the field, not us. If a domain runs on knowledge and process, there is a system in it worth building.</p>
+      <div class="domains reveal">
+        <span class="chip">knowledge engineering</span>
+        <span class="chip">agentic workflows</span>
+        <span class="chip">decision support</span>
+        <span class="chip">process automation</span>
+        <span class="chip">human · machine interaction</span>
+        <span class="chip">retrieval &amp; reasoning</span>
+        <span class="chip">applied research</span>
+        <span class="chip">systems integration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH STATEMENT -->
+  <section class="research">
+    <div class="wrap reveal">
+      <span class="eyebrow">003 — The R&amp;D Underneath</span>
+      <p>Every engagement leaves behind a system we understand deeply — and <em>a little more</em> that we didn't before.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap reveal">
+      <span class="eyebrow">Begin</span>
+      <h2 style="margin-top:24px">Tell us where the knowledge is buried.</h2>
+      <p class="sub" style="margin-left:auto;margin-right:auto">We take on a small number of problems at a time. Send the shape of yours.</p>
+      <a class="mailto" href="mailto:hello@xanadu.example"><span>hello@xanadu.example</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <span>Xanadu Enterprises</span>
+      <span class="note">a sanctuary on the mountain, re-engineered</span>
+      <span>&copy; MMXXVI</span>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // build the outer tick ring
+  (function(){
+    var g=document.getElementById('ticks');
+    if(!g) return;
+    var cx=300,cy=300,r=288,ns='http://www.w3.org/2000/svg';
+    for(var i=0;i<72;i++){
+      var a=(i/72)*Math.PI*2, long=(i%6===0);
+      var r2=r-(long?14:7);
+      var l=document.createElementNS(ns,'line');
+      l.setAttribute('x1',(cx+Math.cos(a)*r).toFixed(1));
+      l.setAttribute('y1',(cy+Math.sin(a)*r).toFixed(1));
+      l.setAttribute('x2',(cx+Math.cos(a)*r2).toFixed(1));
+      l.setAttribute('y2',(cy+Math.sin(a)*r2).toFixed(1));
+      l.setAttribute('stroke','#c6a04e');
+      l.setAttribute('stroke-width', long?'1':'.6');
+      g.appendChild(l);
+    }
+  })();
+
+  // scroll reveal
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.16});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
