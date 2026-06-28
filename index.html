@@ -296,7 +296,7 @@
       <span class="eyebrow">Begin</span>
       <h2 style="margin-top:24px">Tell us where the knowledge is buried.</h2>
       <p class="sub" style="margin-left:auto;margin-right:auto">We take on a small number of problems at a time. Send the shape of yours.</p>
-      <a class="mailto" href="mailto:info@xanaduenterprises.co"><span>info@xanaduenterprises.co</span></a>
+      <a class="mailto" id="contact-mail" href="#contact"><span>info <span class="at">[at]</span> xanaduenterprises <span class="at">[dot]</span> co</span></a>
     </div>
   </section>
 
@@ -338,6 +338,16 @@
       en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
     },{threshold:.16});
     els.forEach(function(e){io.observe(e)});
+  })();
+
+  // assemble the contact address at runtime so it isn't sitting in the source for scrapers
+  (function(){
+    var a=document.getElementById('contact-mail');
+    if(!a) return;
+    var user='info', domain=['xanaduenterprises','co'].join('.');
+    var addr=user+String.fromCharCode(64)+domain;
+    a.href='mailto:'+addr;
+    a.innerHTML='<span>'+addr+'</span>';
   })();
 </script>
 </body>
