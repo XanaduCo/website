@@ -5,6 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xanadu Enterprises — deep knowledge, working systems</title>
 <meta name="description" content="Xanadu Enterprises builds AI systems that understand how work and knowledge move through an organization — then carry them. Agentic workflows, knowledge structures, and a research practice underneath.">
+<link rel="canonical" href="https://xanaduenterprises.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Xanadu Enterprises">
+<meta property="og:title" content="Xanadu Enterprises — deep knowledge, working systems">
+<meta property="og:description" content="AI agents that do real work inside real organizations — and are still running a year after the demo. Designed, built, and operated by people who have run companies themselves.">
+<meta property="og:url" content="https://xanaduenterprises.com/">
+<meta property="og:image" content="https://xanaduenterprises.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Xanadu Enterprises — a stately structure for deep knowledge">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Xanadu Enterprises — deep knowledge, working systems">
+<meta name="twitter:description" content="AI agents that do real work inside real organizations — and are still running a year after the demo. Designed, built, and operated by people who have run companies themselves.">
+<meta name="twitter:image" content="https://xanaduenterprises.com/assets/og.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Xanadu Enterprises",
+  "legalName": "Xanadu Enterprises SG Pte. Ltd.",
+  "url": "https://xanaduenterprises.com/",
+  "logo": "https://xanaduenterprises.com/assets/logo.png",
+  "image": "https://xanaduenterprises.com/assets/og.png",
+  "description": "Xanadu Enterprises builds AI systems that understand how work and knowledge move through an organization — then carry them.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "68 Circular Road, #02-01",
+    "addressLocality": "Singapore",
+    "postalCode": "049422",
+    "addressCountry": "SG"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "UEN",
+    "value": "202631367W"
+  },
+  "knowsAbout": ["Agentic workflows", "Knowledge engineering", "Decision support", "Process automation", "Retrieval and reasoning", "Applied AI research", "Systems integration"]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0e1a'/%3E%3Cg fill='none' stroke='%23c6a04e' stroke-width='1.2'%3E%3Ccircle cx='16' cy='16' r='10'/%3E%3Ccircle cx='16' cy='16' r='5'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='4.5' transform='rotate(35 16 16)'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23e9d9a9'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,6 +102,9 @@
   .mark .sigil{width:22px;height:22px;flex:0 0 auto;opacity:.9}
   .navlink{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--slate);transition:color .3s}
   .navlink:hover{color:var(--gilt)}
+  nav{display:flex;align-items:center;gap:30px}
+  nav .navlink.cta{color:var(--gilt)}
+  nav .navlink.cta:hover{color:#fff}
 
   /* ---------- hero ---------- */
   .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 0 80px}
@@ -97,6 +141,9 @@
     margin:26px auto 0;max-width:34ch;line-height:1.4;
   }
   .sub{margin:22px auto 0;max-width:46ch;color:var(--slate);font-size:1rem}
+  .proof{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px;font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);transition:color .3s}
+  .proof:hover{color:var(--gilt)}
+  .proof .k{color:var(--brass-dim)}
   .cue{margin-top:54px;display:inline-flex;flex-direction:column;align-items:center;gap:10px;color:var(--slate)}
   .cue .eyebrow{color:var(--slate)}
   .cue .stem{width:1px;height:46px;background:linear-gradient(var(--brass),transparent);animation:drift 2.6s ease-in-out infinite}
@@ -104,8 +151,8 @@
 
   /* ---------- section frame ---------- */
   section.band{position:relative;padding:120px 0;border-top:1px solid var(--line)}
-  .lead{display:flex;align-items:baseline;gap:18px;margin-bottom:62px;flex-wrap:wrap}
-  .lead h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(1.9rem,4.5vw,3rem);margin:0;letter-spacing:.01em;color:var(--parchment)}
+  .lead{margin-bottom:44px}
+  .lead h2{margin:0;font-weight:400}
 
   /* ---------- practice (the sequence) ---------- */
   .seq{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -139,6 +186,12 @@
   .research p{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(1.6rem,4.2vw,2.6rem);line-height:1.35;max-width:20ch;margin:0 auto;color:var(--parchment)}
   .research p em{font-style:italic;color:var(--gilt)}
 
+  /* ---------- principles ---------- */
+  .principles{padding:110px 0;border-top:1px solid var(--line);text-align:center}
+  .principles ol{list-style:none;margin:0;padding:0;display:grid;gap:34px}
+  .principles li{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.25;color:var(--parchment)}
+  .principles li em{font-style:italic;color:var(--gilt)}
+
   /* ---------- contact ---------- */
   .contact{padding:130px 0 40px;border-top:1px solid var(--line);text-align:center}
   .contact h2{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(2.2rem,6vw,4rem);margin:0 0 18px;color:#fff}
@@ -155,7 +208,10 @@
 
   footer{border-top:1px solid var(--line);padding:34px 0;margin-top:80px}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;color:var(--slate);font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase}
-  .foot .note{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.92rem;letter-spacing:.02em;text-transform:none;color:var(--brass-dim)}
+  .legal{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:10px 32px;flex-wrap:wrap;color:var(--brass-dim);font-family:"Space Mono",monospace;font-size:.64rem;letter-spacing:.08em;line-height:1.8}
+  .legal address{font-style:normal}
+  .legal a{color:var(--slate);transition:color .3s}
+  .legal a:hover{color:var(--gilt)}
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
@@ -167,7 +223,8 @@
     .clients-grid{grid-template-columns:1fr}
     .astro{opacity:.5;width:min(120vw,560px)}
     section.band{padding:90px 0}
-    .research,.contact{padding:96px 0}
+    .research,.contact,.principles{padding:96px 0}
+    nav .navlink:not(.cta){display:none}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;scroll-behavior:auto}
@@ -189,7 +246,12 @@
       </svg>
       Xanadu
     </a>
-    <a class="navlink" href="#contact">Begin a conversation</a>
+    <nav aria-label="Sections">
+      <a class="navlink" href="#practice">Method</a>
+      <a class="navlink" href="#clients">Work</a>
+      <a class="navlink" href="#people">Who</a>
+      <a class="navlink cta" href="#contact">Begin a conversation</a>
+    </nav>
   </div>
 </header>
 
@@ -233,12 +295,13 @@
     </svg>
 
     <div class="hero-inner">
-      <span class="eyebrow">Lat 38&deg;N &nbsp;·&nbsp; The Mountain Works &nbsp;·&nbsp; Est. MMXXVI</span>
+      <span class="eyebrow">Singapore &nbsp;·&nbsp; Est. MMXXVI</span>
       <h1 class="wordmark">Xan<span class="glint">a</span>du</h1>
       <p class="lede">A stately structure for deep knowledge.</p>
-      <p class="sub">We study how work and intelligence move through an organization — then build the agentic systems that carry them.</p>
+      <p class="sub">We build AI agents that do real work inside real organizations — and are still running a year after the demo. Designed, built, and operated by people who have run companies themselves.</p>
+      <a class="proof" href="#clients"><span class="k">Built for</span><span>Project Nelly</span><span class="k">·</span><span>Gail</span><span class="k">·</span><span>Aamrut / AyuOS</span></a>
       <a class="cue" href="#practice">
-        <span class="eyebrow">Descend</span>
+        <span class="eyebrow">Scroll</span>
         <span class="stem"></span>
       </a>
     </div>
@@ -248,14 +311,13 @@
   <section class="band" id="practice">
     <div class="wrap">
       <div class="lead reveal">
-        <span class="eyebrow">001 — The Method</span>
-        <h2>Three movements, in order.</h2>
+        <h2 class="eyebrow">001 — The Method</h2>
       </div>
       <div class="seq reveal">
         <div class="step">
           <div class="num">I</div>
           <h3>Survey</h3>
-          <p>We map the workflows and knowledge already in motion — and find where people and machines actually meet inside them.</p>
+          <p>We map the workflows and knowledge already in place, and find where people and machines actually meet.</p>
           <span class="tag">workflows · knowledge bases</span>
         </div>
         <div class="step">
@@ -267,10 +329,21 @@
         <div class="step">
           <div class="num">III</div>
           <h3>Deploy</h3>
-          <p>We set the working system where the problem lives, and stay long enough to know it carries its own weight.</p>
-          <span class="tag">in production · in the world</span>
+          <p>We put the system into production where the problem lives, and stay until it runs without us.</p>
+          <span class="tag">production · operations</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="principles">
+    <div class="wrap reveal">
+      <ol>
+        <li>Agents that <em>do the work</em>.</li>
+        <li>Production is <em>the finish line</em>.</li>
+        <li>Built to be <em>inspected</em>.</li>
+      </ol>
     </div>
   </section>
 
@@ -278,10 +351,9 @@
   <section class="band">
     <div class="wrap">
       <div class="lead reveal">
-        <span class="eyebrow">002 — Where We Work</span>
-        <h2>Domain-agnostic, by design.</h2>
+        <h2 class="eyebrow">002 — Where We Work</h2>
       </div>
-      <p class="sub reveal" style="margin:0 0 30px;max-width:54ch">The problem decides the field, not us. If a domain runs on knowledge and process, there is a system in it worth building.</p>
+      <p class="sub reveal" style="margin:0 0 30px;max-width:54ch">We cut our teeth in healthcare — clinics, rural health systems, longevity — where every answer has to hold up in front of a clinician. That standard travels with us into every domain that runs on knowledge and process.</p>
       <div class="domains reveal">
         <span class="chip">knowledge engineering</span>
         <span class="chip">agentic workflows</span>
@@ -299,9 +371,9 @@
   <section class="band" id="clients">
     <div class="wrap">
       <div class="lead reveal">
-        <span class="eyebrow">003 — Who We Work With</span>
-        <h2>Systems in production.</h2>
+        <h2 class="eyebrow">003 — Who We Work With</h2>
       </div>
+      <p class="sub reveal" style="margin:0 0 30px;max-width:54ch">Agentic systems we designed, built, and put into production.</p>
       <div class="clients-grid reveal">
         <a class="client-card" href="https://projectnelly.com/" target="_blank" rel="noopener">
           <span class="client-logo-wrap"><img class="client-logo" src="./assets/clients/nelly.png" alt="Project Nelly logo" loading="lazy" width="240" height="240"></span>
@@ -316,8 +388,26 @@
         <a class="client-card" href="https://aamrut.com/" target="_blank" rel="noopener">
           <span class="client-logo-wrap"><img class="client-logo" src="./assets/clients/aamrut.png" alt="Aamrut logo" loading="lazy" width="480" height="478"></span>
           <span class="client-name">Aamrut</span>
-          <p class="client-desc">Healthspan optimization agents</p>
+          <p class="client-desc">AyuOS — open-source healthspan agents</p>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="band" id="people">
+    <div class="wrap">
+      <div class="lead reveal">
+        <h2 class="eyebrow">004 — Who We Are</h2>
+      </div>
+      <p class="sub reveal" style="margin:0 0 30px;max-width:60ch">Our team has founded and run companies in health technology and advertising technology, led engineering as CTO across multiple health platforms, and led product from definition through adoption. We have sat on the buyer's side of this table. We build the thing we wished we had been sold.</p>
+      <div class="domains reveal">
+        <span class="chip">company founders &amp; operators</span>
+        <span class="chip">CTO-level engineering leadership</span>
+        <span class="chip">product leadership</span>
+        <span class="chip">clinical &amp; health platforms</span>
+        <span class="chip">advertising technology at scale</span>
+        <span class="chip">based in Singapore</span>
       </div>
     </div>
   </section>
@@ -325,8 +415,8 @@
   <!-- RESEARCH STATEMENT -->
   <section class="research">
     <div class="wrap reveal">
-      <span class="eyebrow">004 — The R&amp;D Underneath</span>
-      <p>Every engagement leaves behind a system we understand deeply — and <em>a little more</em> that we didn't before.</p>
+      <span class="eyebrow">005 — The R&amp;D Underneath</span>
+      <p>Every engagement leaves behind a system we understand deeply — and <em>something we didn't know before</em>.</p>
     </div>
   </section>
 
@@ -334,17 +424,21 @@
   <section class="contact" id="contact">
     <div class="wrap reveal">
       <span class="eyebrow">Begin</span>
-      <h2 style="margin-top:24px">Tell us where the knowledge is buried.</h2>
-      <p class="sub" style="margin-left:auto;margin-right:auto">We take on a small number of problems at a time. Send the shape of yours.</p>
-      <a class="mailto" id="contact-mail" href="#contact"><span>info <span class="at">[at]</span> xanaduenterprises <span class="at">[dot]</span> co</span></a>
+      <h2 style="margin-top:24px">Tell us about the problem.</h2>
+      <p class="sub" style="margin-left:auto;margin-right:auto">We take on a small number of engagements at a time. A short email is enough to start, and you will hear back from one of us.</p>
+      <a class="mailto" id="contact-mail" href="#contact"><span>info <span class="at">[at]</span> xanaduenterprises <span class="at">[dot]</span> com</span></a>
     </div>
   </section>
 
   <footer>
     <div class="wrap foot">
       <span>Xanadu Enterprises</span>
-      <span class="note">a sanctuary on the mountain, re-engineered</span>
       <span>&copy; MMXXVI</span>
+    </div>
+    <div class="wrap legal">
+      <span>Xanadu Enterprises SG Pte. Ltd. &nbsp;·&nbsp; UEN 202631367W</span>
+      <address>68 Circular Road, #02-01, Singapore 049422</address>
+      <a href="/privacy.html">Privacy</a>
     </div>
   </footer>
 
@@ -384,7 +478,7 @@
   (function(){
     var a=document.getElementById('contact-mail');
     if(!a) return;
-    var user='info', domain=['xanaduenterprises','co'].join('.');
+    var user='info', domain=['xanaduenterprises','com'].join('.');
     var addr=user+String.fromCharCode(64)+domain;
     a.href='mailto:'+addr;
     a.innerHTML='<span>'+addr+'</span>';
